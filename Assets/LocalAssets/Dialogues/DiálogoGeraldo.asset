@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8c8123eb0d98f41be2101c8b454f9a, type: 3}
+  m_Name: "Di\xE1logoGeraldo"
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: Geraldo de Revilla
+    portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
+    text: 'Hola, soy Geraldo de Revilla.
+
+'
+  - speakerName: Geraldo de Revilla
+    portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
+    text: "Busco a mi caballo maravilla.\n                            _(\\_/) \r\n                          ,((((^`\\\r\n                         ((((  (6 \\ \r\n                       ,((((( ,    \\\r\n   ,,,_              ,(((((  /\"._  ,`,\r\n  ((((\\\\ ,...       ,((((   /    `-.-'\r\n  )))  ;'    `\"'\"'\"\"((((   (      \r\n (((  /            (((      \\\r\n  )) |                      |\r\n ((  |        .       '     |\r\n ))  \\     _ '      `t   ,.')\r\n (   |   y;- -,-\"\"'\"-.\\   \\/  \r\n )   / ./  ) /         `\\  \\\r\n    |./   ( (           / /'\r\n    ||     \\\\          //'|\r\n    ||      \\\\       _//'||\r\n    ||       ))     |_/  ||\r\n    \\_\\     |_/          ||\r\n    `'\"                  \\_\\"
