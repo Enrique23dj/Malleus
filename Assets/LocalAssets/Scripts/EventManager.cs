@@ -2,16 +2,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class EventManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
+    [Header("Interfaz")]
     [SerializeField] private GameObject panel;
-    [SerializeField] private GameObject eventButton;
     [SerializeField] private Image portraitImage;
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private TMP_Text bodyText;
+    [SerializeField] private Button continueButton;
+    [SerializeField] private Button[] choiceButtons; // arrastra aquí los 2 botones
+
+    [Header("Pruebas")]
+    [SerializeField] private DialogueData testDialogue;
 
     private DialogueData current;
     private int index;
+
+    public void StartTestDialogue()
+    {
+        StartDialogue(testDialogue);
+    }
 
     public void StartDialogue(DialogueData data)
     {
@@ -23,16 +33,33 @@ public class EventManager : MonoBehaviour
         ShowLine();
     }
 
+    // Botón Continuar
     public void Next()
     {
-        index++;
-
-        if (index >= current.lines.Length)
+        if (current.lines[index].endsDialogue)
         {
             EndDialogue();
             return;
         }
 
+        GoToLine(index + 1);
+    }
+
+    private void Choose(int targetIndex)
+    {
+        // -1 significa "la siguiente línea"
+        GoToLine(targetIndex < 0 ? index + 1 : targetIndex);
+    }
+
+    private void GoToLine(int newIndex)
+    {
+        if (newIndex < 0 || newIndex >= current.lines.Length)
+        {
+            EndDialogue();
+            return;
+        }
+
+        index = newIndex;
         ShowLine();
     }
 
@@ -44,14 +71,32 @@ public class EventManager : MonoBehaviour
         bodyText.text = line.text;
 
         portraitImage.sprite = line.portrait;
-        portraitImage.enabled = line.portrait != null; 
+        portraitImage.enabled = line.portrait != null;
+
+        bool showChoices = line.hasChoices && line.choices != null && line.choices.Length > 0;
+
+        // Continuar solo se ve si NO hay opciones
+        continueButton.gameObject.SetActive(!showChoices);
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            bool active = showChoices && i < line.choices.Length;
+            choiceButtons[i].gameObject.SetActive(active);
+
+            if (!active) continue;
+
+            DialogueChoice choice = line.choices[i];
+            choiceButtons[i].GetComponentInChildren<TMP_Text>().text = choice.text;
+
+            choiceButtons[i].onClick.RemoveAllListeners();
+            int target = choice.nextLineIndex;
+            choiceButtons[i].onClick.AddListener(() => Choose(target));
+        }
     }
 
     private void EndDialogue()
     {
         panel.SetActive(false);
         current = null;
-
     }
-
 }

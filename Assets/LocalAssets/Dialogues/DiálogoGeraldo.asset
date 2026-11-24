@@ -18,6 +18,34 @@ MonoBehaviour:
     text: 'Hola, soy Geraldo de Revilla.
 
 '
+    hasChoices: 0
+    choices: []
+    endsDialogue: 0
   - speakerName: Geraldo de Revilla
     portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
     text: "Busco a mi caballo maravilla.\n                            _(\\_/) \r\n                          ,((((^`\\\r\n                         ((((  (6 \\ \r\n                       ,((((( ,    \\\r\n   ,,,_              ,(((((  /\"._  ,`,\r\n  ((((\\\\ ,...       ,((((   /    `-.-'\r\n  )))  ;'    `\"'\"'\"\"((((   (      \r\n (((  /            (((      \\\r\n  )) |                      |\r\n ((  |        .       '     |\r\n ))  \\     _ '      `t   ,.')\r\n (   |   y;- -,-\"\"'\"-.\\   \\/  \r\n )   / ./  ) /         `\\  \\\r\n    |./   ( (           / /'\r\n    ||     \\\\          //'|\r\n    ||      \\\\       _//'||\r\n    ||       ))     |_/  ||\r\n    \\_\\     |_/          ||\r\n    `'\"                  \\_\\"
+    hasChoices: 0
+    choices: []
+    endsDialogue: 0
+  - speakerName: Geraldo de Revilla
+    portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
+    text: "\xBFLo has visto?"
+    hasChoices: 1
+    choices:
+    - text: Si
+      nextLineIndex: 4
+    - text: No
+      nextLineIndex: 3
+    endsDialogue: 0
+  - speakerName: Geraldo de Revilla
+    portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
+    text: No? Que pena
+    hasChoices: 0
+    choices: []
+    endsDialogue: 1
+  - speakerName: Geraldo de Revilla
+    portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
+    text: Si? Mola
+    hasChoices: 0
+    choices: []
+    endsDialogue: 1

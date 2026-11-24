@@ -16,3 +16,6 @@ MonoBehaviour:
   - speakerName: Ciri
     portrait: {fileID: -485005110804090401, guid: 20b0beab95e02414abacaa742bbae35c, type: 3}
     text: Saquen Witcher 4
+    hasChoices: 0
+    choices: []
+    endsDialogue: 0
