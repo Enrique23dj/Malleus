@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: "Di\xE1logoGeraldo"
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - speakerName: Geraldo de Revilla
+  - name: "Geraldo de Revilla (0) (Presentaci\xF3n de Gerardo)"
+    editorNote: "Presentaci\xF3n de Gerardo"
+    speakerName: Geraldo de Revilla
     portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
     text: 'Hola, soy Geraldo de Revilla.
 
@@ -21,29 +23,45 @@ MonoBehaviour:
     hasChoices: 0
     choices: []
     endsDialogue: 0
-  - speakerName: Geraldo de Revilla
+  - name: Geraldo de Revilla (1) (Gerardo dice lo que busca)
+    editorNote: Gerardo dice lo que busca
+    speakerName: Geraldo de Revilla
     portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
     text: "Busco a mi caballo maravilla.\n                            _(\\_/) \r\n                          ,((((^`\\\r\n                         ((((  (6 \\ \r\n                       ,((((( ,    \\\r\n   ,,,_              ,(((((  /\"._  ,`,\r\n  ((((\\\\ ,...       ,((((   /    `-.-'\r\n  )))  ;'    `\"'\"'\"\"((((   (      \r\n (((  /            (((      \\\r\n  )) |                      |\r\n ((  |        .       '     |\r\n ))  \\     _ '      `t   ,.')\r\n (   |   y;- -,-\"\"'\"-.\\   \\/  \r\n )   / ./  ) /         `\\  \\\r\n    |./   ( (           / /'\r\n    ||     \\\\          //'|\r\n    ||      \\\\       _//'||\r\n    ||       ))     |_/  ||\r\n    \\_\\     |_/          ||\r\n    `'\"                  \\_\\"
     hasChoices: 0
     choices: []
     endsDialogue: 0
-  - speakerName: Geraldo de Revilla
+  - name: Geraldo de Revilla (2) (Pregunta)
+    editorNote: Pregunta
+    speakerName: Geraldo de Revilla
     portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
     text: "\xBFLo has visto?"
     hasChoices: 1
     choices:
     - text: Si
       nextLineIndex: 4
+      isSkillCheck: 0
+      successChance: 50
+      successLineIndex: -1
+      failLineIndex: -1
     - text: No
       nextLineIndex: 3
+      isSkillCheck: 0
+      successChance: 50
+      successLineIndex: -1
+      failLineIndex: -1
     endsDialogue: 0
-  - speakerName: Geraldo de Revilla
+  - name: Geraldo de Revilla (3) (Dices que no)
+    editorNote: Dices que no
+    speakerName: Geraldo de Revilla
     portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
     text: No? Que pena
     hasChoices: 0
     choices: []
     endsDialogue: 1
-  - speakerName: Geraldo de Revilla
+  - name: Geraldo de Revilla (4) (Dices que si)
+    editorNote: Dices que si
+    speakerName: Geraldo de Revilla
     portrait: {fileID: 9072650324573024778, guid: a6b1ccf02a4c72644a8ae62cf0dc17af, type: 3}
     text: Si? Mola
     hasChoices: 0

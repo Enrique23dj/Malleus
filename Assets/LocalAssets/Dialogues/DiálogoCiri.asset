@@ -13,9 +13,47 @@ MonoBehaviour:
   m_Name: "Di\xE1logoCiri"
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - speakerName: Ciri
+  - name: Ciri (0) (Pregunta)
+    editorNote: Pregunta
+    speakerName: Ciri
     portrait: {fileID: -485005110804090401, guid: 20b0beab95e02414abacaa742bbae35c, type: 3}
-    text: Saquen Witcher 4
+    text: Te gusta Witcher 4
+    hasChoices: 1
+    choices:
+    - text: Si
+      nextLineIndex: 1
+      isSkillCheck: 0
+      successChance: 0
+      successLineIndex: 0
+      failLineIndex: 0
+    - text: (Mentir) No
+      nextLineIndex: 0
+      isSkillCheck: 1
+      successChance: 50
+      successLineIndex: 2
+      failLineIndex: 3
+    endsDialogue: 0
+  - name: Ciri (1) (Dices la verdad)
+    editorNote: Dices la verdad
+    speakerName: Ciri
+    portrait: {fileID: -485005110804090401, guid: 20b0beab95e02414abacaa742bbae35c, type: 3}
+    text: Mola
     hasChoices: 0
     choices: []
-    endsDialogue: 0
+    endsDialogue: 1
+  - name: Ciri (2) (Logras mentir)
+    editorNote: Logras mentir
+    speakerName: Ciri
+    portrait: {fileID: -485005110804090401, guid: 20b0beab95e02414abacaa742bbae35c, type: 3}
+    text: Ah no? Pues que mal
+    hasChoices: 0
+    choices: []
+    endsDialogue: 1
+  - name: Ciri (3) (No logras mentir)
+    editorNote: No logras mentir
+    speakerName: Ciri
+    portrait: {fileID: -485005110804090401, guid: 20b0beab95e02414abacaa742bbae35c, type: 3}
+    text: No te creo
+    hasChoices: 0
+    choices: []
+    endsDialogue: 1

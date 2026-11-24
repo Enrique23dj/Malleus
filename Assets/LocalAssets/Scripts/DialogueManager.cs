@@ -45,10 +45,25 @@ public class DialogueManager : MonoBehaviour
         GoToLine(index + 1);
     }
 
-    private void Choose(int targetIndex)
+    private void Choose(DialogueChoice choice)
     {
+        int target;
+
+        if (choice.isSkillCheck)
+        {
+            int roll = Random.Range(0, 100); // entero de 0 a 99
+            bool success = roll > choice.successChance;
+            target = success ? choice.successLineIndex : choice.failLineIndex;
+
+            Debug.Log($"Tirada: {roll} contra {choice.successChance} → {(success ? "ACIERTO" : "FALLO")}");
+        }
+        else
+        {
+            target = choice.nextLineIndex;
+        }
+
         // -1 significa "la siguiente línea"
-        GoToLine(targetIndex < 0 ? index + 1 : targetIndex);
+        GoToLine(target < 0 ? index + 1 : target);
     }
 
     private void GoToLine(int newIndex)
@@ -89,8 +104,7 @@ public class DialogueManager : MonoBehaviour
             choiceButtons[i].GetComponentInChildren<TMP_Text>().text = choice.text;
 
             choiceButtons[i].onClick.RemoveAllListeners();
-            int target = choice.nextLineIndex;
-            choiceButtons[i].onClick.AddListener(() => Choose(target));
+            choiceButtons[i].onClick.AddListener(() => Choose(choice));
         }
     }
 
